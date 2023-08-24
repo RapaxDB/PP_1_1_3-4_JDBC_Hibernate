@@ -9,5 +9,8 @@
         <module name="TaskJDBC" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hibernate" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
