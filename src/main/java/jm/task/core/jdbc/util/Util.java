@@ -6,12 +6,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.SessionFactory;
-
-import  org.hibernate.service.ServiceRegistry;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import org.hibernate.service.ServiceRegistry;
 import java.util.Properties;
 
 public class Util {
@@ -19,16 +14,7 @@ public class Util {
     private final String username = "root";
     private final String password = "P@rol";
     private SessionFactory sessionFactory;
-    public Connection getConnection() {
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-        return connection;
-    }
+
 
     public SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
